@@ -8,6 +8,7 @@
 
 /* header */
 
+
 .bg-light{
     background-color: rgba(255, 144, 14, 0.1);
 }
@@ -22,10 +23,7 @@
 }
 
 .nav-links{
-    display: flex;
-
-    
-    
+    display: flex;      
 }
 
 .nav-item{
@@ -61,9 +59,13 @@
 /* Banner part */
 
 .banner, .navbar{
-    width: 1440px;
+    width: 1420px;
     /* 1920 er jonno dicchi tkhn tw kaj hoy na */
     margin: 0 auto; 
+}
+
+.text-primary{
+    color: #FF900E;
 }
 
 .btn-primary{
@@ -98,11 +100,74 @@
     width: 100%;
 }
 
+/* main part */
+
+main{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+main > section{
+    margin-top: 130px;
+}
+
+.section-title{
+    font-size: 3rem;
+   font-weight: 700; 
+}
+
+
+.teams{
+    display: flex;
+    align-items: center;
+ 
+    
+}
+
+.team-img-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    
+}
+
+.our-features{
+    max-width: 530px;
+    margin-left: 130px;
+}
+
+
+#quick-list{
+  font-weight: 500;   
+}
+
+
 /* responsive website small device */
 
 @media screen and (max-width:576px){
-    .navbar, .nav-links{
+    .navbar, 
+    .nav-links, 
+    .teams{
         flex-direction: column;
     }
 
+    .team-img-container{
+        grid-template-columns: repeat(1, 1fr);
+        /* margin-left: 30px; */
+    }
+
+    .our-features{
+        margin-left: 60px;
+    }
+
+}
+
+@media screen and (min-width:576px) and (max-width:992){
+    .teams{
+        flex-direction: column;
+    }
+
+     .our-features{
+        margin-left: 60px auto;
+    }
 }
